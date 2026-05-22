@@ -30,9 +30,9 @@ Inspired by the philosophy of **Ubuntu** — *“I am because we are”* — thi
 
 ```bash
 Ubuntu-Captions/
-│
+│── about.html
+│── contact.html
 ├── index.html
-├── style.css
 ├── assets/
 │   ├── images/
 └── README.md
@@ -56,7 +56,7 @@ cd ubuntu-captions
 
 ### Run the website
 
-Open `index.html` in your browser.
+Open `index.html` in your browser
 
 
 ##  Sections Included
