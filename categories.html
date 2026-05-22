@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Categories | Ubuntu Captions</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/10">
+
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 py-5">
+
+      <h1 class="text-2xl md:text-3xl font-bold text-yellow-400">
+        Ubuntu Captions
+      </h1>
+
+      <ul class="hidden md:flex gap-8 uppercase text-sm tracking-widest">
+
+        <li>
+          <a href="index.html" class="hover:text-yellow-400 transition">
+            Home
+          </a>
+        </li>
+
+        <li class="relative">
+          <a href="categories.html" class="text-yellow-400">
+            Categories
+          </a>
+
+          <span class="absolute left-0 -bottom-2 w-full h-[2px] bg-yellow-400 rounded-full"></span>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-yellow-400 transition">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="hover:text-yellow-400 transition">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+  <!-- Hero -->
+  <section class="h-[50vh] flex items-center justify-center relative overflow-hidden">
+
+    <img src="assets/images/outdoor/out13.jpg"
+    class="absolute w-full h-full object-cover"
+    alt="out">
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="relative z-10 text-center px-6">
+
+      <p class="uppercase tracking-[8px] text-yellow-400 text-sm mb-4">
+        Explore Photography Styles
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold">
+        Categories
+      </h1>
+
+    </div>
+
+  </section>
+
+  <!-- Categories Section -->
+  <section class="py-24 px-6 md:px-10">
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="group relative overflow-hidden rounded-3xl">
+
+        <img src="assets/images/safari&wildlife/giraffe.jpg"
+        class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700"
+        alt="girrafe">
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="absolute bottom-0 p-8">
+
+          <h2 class="text-3xl font-bold mb-3">
+            Wildlife
+          </h2>
+
+          <p class="text-gray-300 mb-5">
+            Experience the beauty of Africa’s wildlife through cinematic photography.
+          </p>
+
+          <a href="wildlife.html"
+          class="text-yellow-400 uppercase tracking-widest text-sm">
+            Explore →
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative overflow-hidden rounded-3xl">
+
+        <img src="assets/images/wedd/wed15.jpg"
+        class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700"
+        alt="">
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="absolute bottom-0 p-8">
+
+          <h2 class="text-3xl font-bold mb-3">
+            Weddings
+          </h2>
+
+          <p class="text-gray-300 mb-5">
+            Elegant storytelling for unforgettable wedding memories.
+          </p>
+
+          <a href="#"
+          class="text-yellow-400 uppercase tracking-widest text-sm">
+            Explore →
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group relative overflow-hidden rounded-3xl">
+
+        <img src="assets/images/outdoor/out13.jpg"
+        class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700"
+        alt="">
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="absolute bottom-0 p-8">
+
+          <h2 class="text-3xl font-bold mb-3">
+            Outdoor
+          </h2>
+
+          <p class="text-gray-300 mb-5">
+            Capturing natural light, landscapes, and adventurous moments.
+          </p>
+
+          <a href="#"
+          class="text-yellow-400 uppercase tracking-widest text-sm">
+            Explore →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
