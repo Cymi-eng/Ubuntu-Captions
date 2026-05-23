@@ -4,42 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Wildlife | Ubuntu Captions</title>
+  <title>Weddings | Ubuntu Captions</title>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white overflow-x-hidden">
 
   <!-- Navbar -->
-  <nav class="p-6 backdrop-blur-md bg-black/30 fixed w-full z-50">
+  <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/10">
 
-    <a href="categories.html"
-    class="text-yellow-400 uppercase tracking-widest">
-      ← Back
-    </a>
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 py-5">
+
+      <a href="index.html"
+      class="text-2xl md:text-3xl font-bold text-yellow-400">
+        Ubuntu Captions
+      </a>
+
+      <a href="categories.html"
+      class="uppercase tracking-widest text-sm hover:text-yellow-400 transition">
+        ← Back
+      </a>
+
+    </div>
 
   </nav>
 
-  <!-- Header -->
-  <section class="pt-32 pb-16 text-center">
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
 
-    <p class="uppercase tracking-[8px] text-yellow-400 text-sm mb-4">
-      Ubuntu Captions
-    </p>
+    <!-- Background -->
+    <img src="assets/images/wedd/wed15.jpg"
+    class="absolute w-full h-full object-cover"
+    alt="">
 
-    <h1 class="text-5xl md:text-7xl font-extrabold">
-      weddings Gallery
-    </h1>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6">
+
+      <p class="uppercase tracking-[8px] text-yellow-400 text-sm mb-5">
+        Ubuntu Captions Weddings
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+
+        Timeless Love <br>
+
+        <span class="text-yellow-400">
+          Beautifully Captured
+        </span>
+
+      </h1>
+
+      <p class="max-w-2xl text-gray-300 text-lg md:text-xl mx-auto">
+
+        Elegant wedding storytelling through cinematic photography.
+
+      </p>
+
+    </div>
 
   </section>
 
-  <!-- Gallery -->
-  <section class="px-6 md:px-10 pb-20">
+  <!-- Wedding Gallery -->
+  <section class="py-24 px-6 md:px-10">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="max-w-7xl mx-auto">
 
-      <img src="assets/images/wedd/wed10.jpg"
+      <!-- Heading -->
+      <div class="mb-16 text-center">
+
+        <p class="uppercase tracking-[8px] text-yellow-400 text-sm mb-4">
+          Gallery
+        </p>
+
+        <h2 class="text-4xl md:text-6xl font-extrabold">
+          Wedding Moments
+        </h2>
+
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+         <img src="assets/images/wedd/wed10.jpg"
       class="rounded-3xl h-[400px] w-full object-cover hover:scale-105 transition duration-500"
       alt="wed">
 
@@ -95,60 +145,183 @@
       class="rounded-3xl h-[400px] w-full object-cover hover:scale-105 transition duration-500"
       alt="wed">
 
+      </div>
+
     </div>
 
   </section>
+  <!-- Pricing Section -->
+<section class="py-24 px-6 md:px-10 bg-zinc-950">
 
-  <!-- Hire Section -->
-<section class="py-24 px-6 md:px-10 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto">
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/75"></div>
+    <!-- Heading -->
+    <div class="text-center mb-16">
 
-  <!-- Content -->
-  <div class="relative z-10 max-w-4xl mx-auto text-center">
+      <p class="uppercase tracking-[8px] text-yellow-400 text-sm mb-4">
+        Wedding Packages
+      </p>
 
-    <p class="uppercase tracking-[8px] text-yellow-400 text-sm mb-5">
-      Ready For Your Love Story?
-    </p>
+      <h2 class="text-4xl md:text-6xl font-extrabold">
+        Pricing Plans
+      </h2>
 
-    <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+    </div>
 
-      Hire Ubuntu Captions <br>
+    <!-- Pricing Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-     Weddings Photography
+      <!-- Basic -->
+      <div class="bg-black border border-white/10 rounded-3xl p-10 hover:border-yellow-400 transition duration-500">
 
-    </h2>
+        <p class="uppercase tracking-[6px] text-yellow-400 text-sm mb-4">
+          Basic
+        </p>
 
-    <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10">
+        <h3 class="text-5xl font-extrabold mb-6">
+          Ksh 15K
+        </h3>
 
-      From truthful love moments to family storytelling,
-      Ubuntu Captions captures love in its purest form.
+        <ul class="space-y-4 text-gray-300 mb-10">
 
-    </p>
+          <li>✔ 3 Hour Coverage</li>
+          <li>✔ 50 Edited Photos</li>
+          <li>✔ Online Gallery</li>
+          <li>✔ Couple Portraits</li>
 
-    <!-- Buttons -->
-    <div class="flex flex-col sm:flex-row justify-center gap-5">
+        </ul>
 
-      <a href="contact.html"
-      class="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition duration-300">
+        <a href="contact.html"
+        class="block text-center bg-yellow-400 text-black py-4 rounded-full font-semibold hover:scale-105 transition duration-300">
 
-        Book A Wedding Session
+          Book Package
 
-      </a>
+        </a>
 
-      <a href="https://wa.me/254704019505"
-      class="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition duration-300">
+      </div>
 
-        WhatsApp Us
+      <!-- Premium -->
+      <div class="bg-yellow-400 text-black rounded-3xl p-10 scale-105 shadow-2xl shadow-yellow-500/20">
 
-      </a>
+        <p class="uppercase tracking-[6px] text-sm mb-4">
+          Premium
+        </p>
+
+        <h3 class="text-5xl font-extrabold mb-6">
+          Ksh 35K
+        </h3>
+
+        <ul class="space-y-4 mb-10">
+
+          <li>✔ Full Day Coverage</li>
+          <li>✔ 200 Edited Photos</li>
+          <li>✔ Cinematic Highlights</li>
+          <li>✔ Drone Shots</li>
+          <li>✔ Premium Album</li>
+
+        </ul>
+
+        <a href="contact.html"
+        class="block text-center bg-black text-white py-4 rounded-full font-semibold hover:scale-105 transition duration-300">
+
+          Book Package
+
+        </a>
+
+      </div>
+
+      <!-- Luxury -->
+      <div class="bg-black border border-white/10 rounded-3xl p-10 hover:border-yellow-400 transition duration-500">
+
+        <p class="uppercase tracking-[6px] text-yellow-400 text-sm mb-4">
+          Luxury
+        </p>
+
+        <h3 class="text-5xl font-extrabold mb-6">
+          Ksh 60K
+        </h3>
+
+        <ul class="space-y-4 text-gray-300 mb-10">
+
+          <li>✔ 2 Day Coverage</li>
+          <li>✔ Unlimited Photos</li>
+          <li>✔ Full Cinematic Film</li>
+          <li>✔ Drone Coverage</li>
+          <li>✔ Luxury Wedding Album</li>
+          <li>✔ VIP Editing</li>
+
+        </ul>
+
+        <a href="contact.html"
+        class="block text-center bg-yellow-400 text-black py-4 rounded-full font-semibold hover:scale-105 transition duration-300">
+
+          Book Package
+
+        </a>
+
+      </div>
 
     </div>
 
   </div>
 
 </section>
+
+  <!-- Hire Section -->
+  <section class="relative py-24 px-6 md:px-10 overflow-hidden">
+
+    <!-- Background -->
+    <img src="assets/images/wedd/wed15.jpg"
+    class="absolute inset-0 w-full h-full object-cover"
+    alt="">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/80"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+
+      <p class="uppercase tracking-[8px] text-yellow-400 text-sm mb-5">
+        Your Special Day
+      </p>
+
+      <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+
+        Let Ubuntu Captions <br>
+
+        Tell Your Love Story
+
+      </h2>
+
+      <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10">
+
+        From intimate ceremonies to grand celebrations,
+        we capture every emotion with elegance and cinematic beauty.
+
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-5">
+
+        <a href="contact.html"
+        class="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition duration-300">
+
+          Book Wedding Session
+
+        </a>
+
+        <a href="https://wa.me/254700000000"
+        class="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition duration-300">
+
+          WhatsApp Us
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </body>
 </html>
