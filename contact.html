@@ -8,6 +8,9 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
@@ -79,22 +82,13 @@
           <!-- Email -->
           <div class="flex items-center gap-4">
 
-            <div class="w-14 h-14 rounded-2xl bg-yellow-400 flex items-center justify-center text-black text-xl font-bold">
-
-              @
-
+            <div class="w-14 h-14 rounded-2xl bg-yellow-400 flex items-center justify-center text-black text-xl">
+              <i class="fa-solid fa-envelope"></i>
             </div>
 
             <div>
-
-              <p class="text-gray-400 text-sm">
-                Email
-              </p>
-
-              <p class="text-lg font-semibold">
-                eaiancymi@gmail.com
-              </p>
-
+              <p class="text-gray-400 text-sm">Email</p>
+              <p class="text-lg font-semibold">eaiancymi@gmail.com</p>
             </div>
 
           </div>
@@ -102,22 +96,13 @@
           <!-- Phone -->
           <div class="flex items-center gap-4">
 
-            <div class="w-14 h-14 rounded-2xl bg-yellow-400 flex items-center justify-center text-black text-xl font-bold">
-
-              ☎
-
+            <div class="w-14 h-14 rounded-2xl bg-yellow-400 flex items-center justify-center text-black text-xl">
+              <i class="fa-solid fa-phone"></i>
             </div>
 
             <div>
-
-              <p class="text-gray-400 text-sm">
-                Phone
-              </p>
-
-              <p class="text-lg font-semibold">
-                +254 704 019505
-              </p>
-
+              <p class="text-gray-400 text-sm">Phone</p>
+              <p class="text-lg font-semibold">+254 704 019505</p>
             </div>
 
           </div>
@@ -125,22 +110,13 @@
           <!-- Location -->
           <div class="flex items-center gap-4">
 
-            <div class="w-14 h-14 rounded-2xl bg-yellow-400 flex items-center justify-center text-black text-xl font-bold">
-
-              ⌂
-
+            <div class="w-14 h-14 rounded-2xl bg-yellow-400 flex items-center justify-center text-black text-xl">
+              <i class="fa-solid fa-location-dot"></i>
             </div>
 
             <div>
-
-              <p class="text-gray-400 text-sm">
-                Location
-              </p>
-
-              <p class="text-lg font-semibold">
-                Nairobi, Kenya
-              </p>
-
+              <p class="text-gray-400 text-sm">Location</p>
+              <p class="text-lg font-semibold">Nairobi, Kenya</p>
             </div>
 
           </div>
@@ -167,64 +143,36 @@
         <!-- Form -->
         <form class="space-y-6">
 
-          <!-- Name -->
           <div>
-
-            <label class="block text-sm mb-3 text-gray-300">
-              Full Name
-            </label>
-
+            <label class="block text-sm mb-3 text-gray-300">Full Name</label>
             <input type="text"
-            placeholder="Enter your full name"
-            class="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-yellow-400 transition">
-
+            class="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-yellow-400 transition"
+            placeholder="Enter your full name">
           </div>
 
-          <!-- Email -->
           <div>
-
-            <label class="block text-sm mb-3 text-gray-300">
-              Email Address
-            </label>
-
+            <label class="block text-sm mb-3 text-gray-300">Email Address</label>
             <input type="email"
-            placeholder="Enter your email"
-            class="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-yellow-400 transition">
-
+            class="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-yellow-400 transition"
+            placeholder="Enter your email">
           </div>
 
-          <!-- Subject -->
           <div>
-
-            <label class="block text-sm mb-3 text-gray-300">
-              Subject
-            </label>
-
+            <label class="block text-sm mb-3 text-gray-300">Subject</label>
             <input type="text"
-            placeholder="Photography booking..."
-            class="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-yellow-400 transition">
-
+            class="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-yellow-400 transition"
+            placeholder="Photography booking...">
           </div>
 
-          <!-- Message -->
           <div>
-
-            <label class="block text-sm mb-3 text-gray-300">
-              Message
-            </label>
-
+            <label class="block text-sm mb-3 text-gray-300">Message</label>
             <textarea rows="5"
-            placeholder="Write your message..."
-            class="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-yellow-400 transition resize-none"></textarea>
-
+            class="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-yellow-400 transition resize-none"
+            placeholder="Write your message..."></textarea>
           </div>
 
-          <!-- Button -->
-          <button
-          class="w-full bg-yellow-400 text-black py-4 rounded-2xl font-bold hover:scale-[1.02] transition duration-300">
-
+          <button class="w-full bg-yellow-400 text-black py-4 rounded-2xl font-bold hover:scale-[1.02] transition duration-300">
             Send Message
-
           </button>
 
         </form>
