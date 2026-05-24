@@ -29,13 +29,14 @@ Inspired by the philosophy of **Ubuntu** — *“I am because we are”* — thi
 ##  Project Structure
 
 ```bash
-Ubuntu-Captions/
-│── about.html
-│── contact.html
-├── index.html
-├── assets/
-│   ├── images/
-└── README.md
+Ubuntu-Captions
+└───assets
+    └───images
+        ├───africanculturestories
+        ├───indoors
+        ├───outdoor
+        ├───safari&wildlife
+        └───wedd
 ```
 
 ---
