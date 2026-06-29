@@ -32,5 +32,94 @@
         "title": "Wedding Couple",
         "category": "Wedding",
         "image": "assets/images/wedd/wedd 1.jpg"
-    }
+    },
+
+
+  {
+    "id": 1,
+    "title": "Buffalo",
+    "description": "Ubuntu Capturing raw natural beauty of the African Buffalo",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/buffalo.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Sunset",
+    "description": "The giraffe posed, Ubuntu delivered",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/giraffe.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Ostrich",
+    "description": "The bird that never flies",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/ostrich.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Simba",
+    "description": "The king of Ubuntu",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/Simba.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Leopard",
+    "description": "Beautiful spots as always, Ubuntu admires",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/spot.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Zebra",
+    "description": "The Donkey that escaped responsibilities and chose beauty",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/zebra.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Tembo",
+    "description": "The strongest survives",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/tembo.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Beauty",
+    "description": "Even the water reflects beauty & Ubuntu shot it",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/water zebra.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Safari",
+    "description": "Tourists admire, Ubuntu captures",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/truck.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Eagle",
+    "description": "Ruler of the Sky",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/eagle.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Giraffes",
+    "description": "Humble but hostile family",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/3 twiga.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Lioness",
+    "description": "The proud Queen",
+    "category": "wildlife",
+    "image": "assets/images/safari&wildlife/simba truck.jpg"
+  }
+
+
+
 ]

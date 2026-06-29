@@ -3,7 +3,7 @@ const menuBtn= document.getElementById("menu-btn")
 
 // getting the mobile enu 
 const mobileMenu = document.getElementById("mobile-menu")
-
+if (menuBtn && mobileMenu) { 
 // when the button is clicked .....
 menuBtn.addEventListener("click", function() {
     // if Menu is hidden,show it.
@@ -14,90 +14,120 @@ menuBtn.addEventListener("click", function() {
     // make the menu display vertically
     mobileMenu.classList.toggle("flex")
 });
+}
+
+
 // Scroll To Top Button
 const topBtn = document.getElementById("topBtn");
 
-// Show button after scrolling 300px
-window.addEventListener("scroll", () => {
+if (topBtn) {
 
-    if (window.scrollY > 300) {
-        topBtn.classList.remove("hidden");
-    } else {
-        topBtn.classList.add("hidden");
-    }
+    window.addEventListener("scroll", () => {
 
-});
+        if (window.scrollY > 300) {
+            topBtn.classList.remove("hidden");
+        } else {
+            topBtn.classList.add("hidden");
+        }
 
-// Scroll smoothly to the top
-topBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
     });
 
-});
+    topBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
 
 // HERO SLIDER USING FETCH API
 
 
 const heroSlider = document.getElementById("hero-slider");
 
-fetch("data/gallery.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Failed to load gallery.json");
-        }
+if (heroSlider) {
 
-        return response.json();
-    })
+    fetch("data/gallery.json")
+        .then(response => response.json())
+        .then(data => {
 
-    .then(images => {
+            const heroImages = data.slice(0, 5);
 
-        // Create image elements
-        images.forEach((photo, index) => {
+            heroImages.forEach(photo => {
 
-            const img = document.createElement("img");
+                const img = document.createElement("img");
 
-            img.src = photo.image;
-            img.alt = photo.title;
+                img.src = photo.image;
+                img.alt = photo.title;
+                img.className =
+                    "absolute inset-0 w-full h-full object-cover";
 
-            img.className =
-                "absolute inset-0 w-full h-full object-cover";
+                heroSlider.appendChild(img);
 
-            // Show the first image
-            if (index === 0) {
-                img.classList.add("active");
-            }
-
-            heroSlider.appendChild(img);
+            });
 
         });
 
-        // Get all images
-        const slides = heroSlider.querySelectorAll("img");
+}
+// WILDLIFE GALLERY
 
-        let current = 0;
 
-        // Change image every 4 seconds
-        setInterval(() => {
+const wildlifeGallery = document.getElementById("wildlife-gallery");
 
-            slides[current].classList.remove("active");
+if (wildlifeGallery) {
 
-            current++;
-
-            if (current >= slides.length) {
-                current = 0;
+    fetch("data/gallery.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load gallery.json");
             }
+            return response.json();
+        })
 
-            slides[current].classList.add("active");
+        .then(data => {
 
-        }, 4000);
+            // Get only wildlife photos (works for Wildlife, wildlife, WILDLIFE...)
+            const wildlife = data.filter(photo =>
+                photo.category.toLowerCase() === "wildlife"
+            );
 
-    })
+            wildlife.forEach(photo => {
 
-    .catch(error => {
+                wildlifeGallery.innerHTML += `
+                    <div class="relative group overflow-hidden rounded-3xl">
 
-        console.error(error);
+                        <img
+                            src="${photo.image}"
+                            alt="${photo.title}"
+                            class="rounded-3xl h-[400px] w-full object-cover hover:scale-105 transition duration-500">
 
-    });
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-500"></div>
+
+                        <div class="absolute bottom-0 left-0 w-full p-5
+                            translate-y-full group-hover:translate-y-0
+                            transition duration-500
+                            bg-gradient-to-t from-black/90 to-transparent">
+
+                            <h3 class="text-xl font-bold text-yellow-400">
+                                ${photo.title}
+                            </h3>
+
+                            <p class="text-gray-300 text-sm">
+                                ${photo.description || ""}
+                            </p>
+
+                        </div>
+
+                    </div>
+                `;
+
+            });
+
+        })
+
+        .catch(error => console.error(error));
+
+}
