@@ -1,60 +1,51 @@
-// Get the button 
-const menuBtn= document.getElementById("menu-btn")
+// Get the button
+const menuBtn = document.getElementById("menu-btn");
 
-// getting the mobile enu 
-const mobileMenu = document.getElementById("mobile-menu")
-if (menuBtn && mobileMenu) { 
-// when the button is clicked .....
-menuBtn.addEventListener("click", function() {
+// getting the mobile enu
+const mobileMenu = document.getElementById("mobile-menu");
+if (menuBtn && mobileMenu) {
+  // when the button is clicked .....
+  menuBtn.addEventListener("click", function () {
     // if Menu is hidden,show it.
     //if Menu is showing,hide it.
 
     mobileMenu.classList.toggle("hidden");
 
     // make the menu display vertically
-    mobileMenu.classList.toggle("flex")
-});
+    mobileMenu.classList.toggle("flex");
+  });
 }
-
 
 // Scroll To Top Button
 const topBtn = document.getElementById("topBtn");
 
 if (topBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      topBtn.classList.remove("hidden");
+    } else {
+      topBtn.classList.add("hidden");
+    }
+  });
 
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 300) {
-            topBtn.classList.remove("hidden");
-        } else {
-            topBtn.classList.add("hidden");
-        }
-
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
-
-    topBtn.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
+  });
 }
 
 // HERO SLIDER USING FETCH API
 
-
 const heroSlider = document.getElementById("hero-slider");
 
 if (heroSlider) {
-
     fetch("data/gallery.json")
         .then(response => response.json())
         .then(data => {
 
-            const heroImages = data.slice(0, 5);
+            const heroImages = data.filter(photo => photo.hero === true);
 
             heroImages.forEach(photo => {
 
@@ -69,34 +60,41 @@ if (heroSlider) {
 
             });
 
-        });
+            const images = heroSlider.querySelectorAll("img");
 
+            if (images.length > 0) {
+                let current = 0;
+                images[current].classList.add("active");
+
+                setInterval(() => {
+                    images[current].classList.remove("active");
+                    current = (current + 1) % images.length;
+                    images[current].classList.add("active");
+                }, 5000);
+            }
+        });
 }
 // WILDLIFE GALLERY
-
 
 const wildlifeGallery = document.getElementById("wildlife-gallery");
 
 if (wildlifeGallery) {
+  fetch("data/gallery.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load gallery.json");
+      }
+      return response.json();
+    })
 
-    fetch("data/gallery.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Failed to load gallery.json");
-            }
-            return response.json();
-        })
+    .then((data) => {
+      // Get only wildlife photos (works for Wildlife, wildlife, WILDLIFE...)
+      const wildlife = data.filter(
+        (photo) => photo.category.toLowerCase() === "wildlife",
+      );
 
-        .then(data => {
-
-            // Get only wildlife photos (works for Wildlife, wildlife, WILDLIFE...)
-            const wildlife = data.filter(photo =>
-                photo.category.toLowerCase() === "wildlife"
-            );
-
-            wildlife.forEach(photo => {
-
-                wildlifeGallery.innerHTML += `
+      wildlife.forEach((photo) => {
+        wildlifeGallery.innerHTML += `
                     <div class="relative group overflow-hidden rounded-3xl">
 
                         <img
@@ -123,11 +121,8 @@ if (wildlifeGallery) {
 
                     </div>
                 `;
+      });
+    })
 
-            });
-
-        })
-
-        .catch(error => console.error(error));
-
+    .catch((error) => console.error(error));
 }
