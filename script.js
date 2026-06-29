@@ -37,3 +37,67 @@ topBtn.addEventListener("click", () => {
     });
 
 });
+
+// HERO SLIDER USING FETCH API
+
+
+const heroSlider = document.getElementById("hero-slider");
+
+fetch("data/gallery.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to load gallery.json");
+        }
+
+        return response.json();
+    })
+
+    .then(images => {
+
+        // Create image elements
+        images.forEach((photo, index) => {
+
+            const img = document.createElement("img");
+
+            img.src = photo.image;
+            img.alt = photo.title;
+
+            img.className =
+                "absolute inset-0 w-full h-full object-cover";
+
+            // Show the first image
+            if (index === 0) {
+                img.classList.add("active");
+            }
+
+            heroSlider.appendChild(img);
+
+        });
+
+        // Get all images
+        const slides = heroSlider.querySelectorAll("img");
+
+        let current = 0;
+
+        // Change image every 4 seconds
+        setInterval(() => {
+
+            slides[current].classList.remove("active");
+
+            current++;
+
+            if (current >= slides.length) {
+                current = 0;
+            }
+
+            slides[current].classList.add("active");
+
+        }, 4000);
+
+    })
+
+    .catch(error => {
+
+        console.error(error);
+
+    });
