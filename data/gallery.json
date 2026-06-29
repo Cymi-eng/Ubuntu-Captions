@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "title": "African Eagle",
+        "category": "Wildlife",
+        "image": "assets/images/safari&wildlife/eagle.jpg"
+    },
+
+    {
+        "id": 2,
+        "title": "Outdoor Portrait",
+        "category": "Outdoor",
+        "image": "assets/images/outdoor/out13.jpg"
+    },
+
+    {
+        "id": 3,
+        "title": "Wedding Ceremony",
+        "category": "Wedding",
+        "image": "assets/images/wedd/wed15.jpg"
+    },
+
+    {
+        "id": 4,
+        "title": "Three Giraffes",
+        "category": "Wildlife",
+        "image": "assets/images/safari&wildlife/3 twiga.jpg"
+    },
+
+    {
+        "id": 5,
+        "title": "Wedding Couple",
+        "category": "Wedding",
+        "image": "assets/images/wedd/wedd 1.jpg"
+    }
+]
